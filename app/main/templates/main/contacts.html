@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block modal_cart %}
+    {% include 'includes/cart_button.html' %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="mt-4 p-2 bg-white custom-shadow rounded-4">
+        <h2 class="m-3"><strong>{{ content  }}</strong></h2>
+        <div class="pr-cont">
+            <div >
+                <h4>Адрес</h4>
+                <p class="pr-cont-data"> 101000 Моя обл., Мой город, ул. Моя 17</p>
+            </div>
+            <div>
+                <h4>Телефон</h4>
+                <p class="pr-cont-data">+7 (123) 456-7890</p>
+            </div>
+            <div>
+                <h4>Почта</h4>
+                <p class="pr-cont-data">info@home.ru</p>
+            </div>
+            <div>
+                <h4>Часы работы</h4>
+                <p class="pr-cont-data">Пн-Пт: 9:00 - 18:00<br>Сб-Вс: 10:00 - 17:00</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Home 2024</p>
+        </div>
+    </footer>
+{% endblock %}
+
+

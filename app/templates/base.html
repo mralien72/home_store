@@ -38,8 +38,8 @@
                                 Информация
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="#">Доставка и оплата</a></li>
-                                <li><a class="dropdown-item  text-white" href="#">Контактная информация</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url 'main:delivery_payment' %}">Доставка и оплата</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url 'main:contacts' %}">Контактная информация</a></li>
                                 <li><a class="dropdown-item  text-white" href="{% url 'main:about' %}">Про нас</a></li>
                             </ul>
                         </li>
@@ -57,7 +57,7 @@
                                 Мой профиль
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url 'user:users_cart' %}">Корзина</a></li>
                                 <li><a class="dropdown-item  text-white" href="{% url 'user:profile' %}">Личный кабинет</a>
                                 </li>
                                 {% if user.is_admin or user.is_staff %}
@@ -108,7 +108,6 @@
         <div class="container">
             <div class="row mt-1">
                 <div class="col-lg-2">
-                    <!-- Пустой блок на Ваше усмотрение -->
                 </div>
                 <div class="col-lg-10">
                     <!-- Контент на странице -->

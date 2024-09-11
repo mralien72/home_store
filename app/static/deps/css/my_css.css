@@ -36,3 +36,11 @@ body {
   border-radius: 15px;
   font-size: 0.7rem;
 }
+
+.pr-cont {
+  padding-left: 40px;
+}
+
+.pr-cont-data {
+    padding-left: 25px;
+}
