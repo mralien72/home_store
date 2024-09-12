@@ -1,4 +1,3 @@
-from django.db.models import Q
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from goods.models import Products
 
@@ -10,16 +9,3 @@ def q_search(query):
     query = SearchQuery(query)
 
     return Products.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gt=0).order_by('-rank')
-
-
-
-    # Первая версия поиска реализованная вручную
-    # keywords = [word for word in query.split() if len(word) > 2]
-    #
-    # q_object = Q()
-    #
-    # for token in keywords:
-    #     q_object |= Q(name__icontains=token)
-    #     q_object |= Q(description__icontains=token)
-    #
-    # return Products.objects.filter(q_object)
