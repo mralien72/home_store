@@ -17,14 +17,14 @@ def about(request):
 
 
 def delivery_payment(request):
-    context = {'title': 'Home - О нас',
+    context = {'title': 'Home - Доставка и оплата',
                'content': 'Доставка и оплата',
                }
     return render(request, 'main/delivyry_payment.html', context)
 
 
 def contacts(request):
-    context = {'title': 'Home - О нас',
+    context = {'title': 'Home - Контакты',
                'content': 'Контакты',
                }
     return render(request, 'main/contacts.html', context)
